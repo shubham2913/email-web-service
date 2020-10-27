@@ -1,4 +1,6 @@
-# email-web-service - This web service supports a get method which returns the number of disticnt email ids given a list of email addresses.
+# email-web-service - 
+
+This web service supports a get method which returns the number of disticnt email ids given a list of email addresses.
 
 # Methodology Used - 
 1. The email address is first parsed using Gmail account matching rules, i.e. '.' is ignored in the username and any charaters after '+' character in the username will be ignored.
@@ -15,7 +17,7 @@ Build Steps -
 3. Running this command will build the code, run test cases defined and start a server for the web service.
 4. Note - error can occur if the port 8080 is not available for the web server. 
 
-#Running the Web Service - 
+# Running the Web Service - 
 Once the server starts successfully, open a internet browser window or Postman and type a url similar to the one below - 
 
 http://localhost:8080/check-emails?emails=test.email@gmail.com,test.email%2bspam@gmail.com,testemail@gmail.conm
