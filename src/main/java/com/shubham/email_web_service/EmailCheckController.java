@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmailCheckController {
 
-    @GetMapping("/check-emails")
+    @GetMapping("/unique-emails")
     public ResponseEntity countUniqueEmails(@RequestParam(value = "emails", required = false) List<String> emails) {
         try {
             //getting total number of emails passed in query
@@ -40,8 +38,8 @@ public class EmailCheckController {
                     }
                 }
 
-                //if @ character is not present or if email address begins with @, address is not valid, moving on to the next email
-                if(index<=0)
+                //if @ character is not present or if email address begins with @(no username) or ends at @(no domain), address is not valid, moving on to the next email
+                if(index<=0 || index==l-1)
                     continue;
                 //creating string builder object to hold the parsed email address
                 StringBuilder parsedEmail=new StringBuilder();
