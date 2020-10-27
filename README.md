@@ -5,7 +5,7 @@ This web service supports a get method which returns the number of disticnt emai
 # Methodology Used - 
 1. The email address is first parsed using Gmail account matching rules, i.e. '.' is ignored in the username and any charaters after '+' character in the username will be ignored.
 2. Unique addresses are then maintained using a HashSet.
-3. Any email address without username has not been considered.
+3. Any email address without username or domain has not been considered.
 4. The username and domain part has been separated using the last occurence of '@' in the string.
 
 # Build - 
