@@ -23,10 +23,12 @@ Build Steps -
 3. Running this command will build the code, run test cases defined and start a server for the web service.
 4. Note - error can occur if the port 8080 is not available for the web server. 
 
-# Running the Web Service - 
+# Calling the Web Service - 
 
-Once the server starts successfully, open a internet browser window or Postman and type a url similar to the one below - 
+Once the server starts successfully, open a internet browser window or Postman and type a url similar to the ones below - 
 
 http://localhost:8080/unique-emails?emails=test.email@gmail.com,test.email%2bspam@gmail.com,testemail@gmail.com
+
+http://localhost:8080/unique-emails?emails=test.email@gmail.com,test.email@fetchrewards.com
 
 Note - '+' character might need to be replaced with '%2b' for correct results.
