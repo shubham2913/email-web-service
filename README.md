@@ -1,4 +1,4 @@
-# email-web-service - 
+# email-web-service 
 
 This web service supports a get method which returns the number of disticnt email ids given a list of email addresses.
 
@@ -10,7 +10,13 @@ This web service supports a get method which returns the number of disticnt emai
 
 # Build - 
 The web serivce has been created using Java, Spring and Maven. 
+
 Pre-requisites - Java 8, Apache Maven
+
+Java Download - https://www.oracle.com/java/technologies/javase-downloads.html
+
+Maven download link with steps - https://maven.apache.org/download.cgi
+
 Build Steps - 
 1. Clone/download the project.
 2. From the directory where the project resides, run the command -  mvn spring-boot:run
@@ -18,7 +24,9 @@ Build Steps -
 4. Note - error can occur if the port 8080 is not available for the web server. 
 
 # Running the Web Service - 
+
 Once the server starts successfully, open a internet browser window or Postman and type a url similar to the one below - 
 
-http://localhost:8080/check-emails?emails=test.email@gmail.com,test.email%2bspam@gmail.com,testemail@gmail.conm
-Note - '+' character needs to be replaced with %2b for correct results.
+http://localhost:8080/unique-emails?emails=test.email@gmail.com,test.email%2bspam@gmail.com,testemail@gmail.com
+
+Note - '+' character might need to be replaced with '%2b' for correct results.
